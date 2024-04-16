@@ -8,7 +8,8 @@ const GameListBlock = ({ imageUrl, caption,pageLink}) => {
     border: "1px solid #ccc",
     borderRadius: "5px",
     overflow: "hidden",
-    display: "inline-block"
+    display: "inline-block",
+    marginRight: '5px'
   };
 
   const imageStyle = {

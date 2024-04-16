@@ -10,6 +10,8 @@ const List = () => {
       <GameListBlock pageLink={"/wordLearn"} imageUrl={tapandsay} />
       <GameListBlock />
       <GameListBlock />
+      <GameListBlock />
+      <GameListBlock />
       <Link to="/mathgame">Math</Link>
     </ul>
   );

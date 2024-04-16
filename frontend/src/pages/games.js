@@ -10,14 +10,18 @@ function Games() {
 
     }
     return (
-        <>
-        <NavigationBar />
-        <br></br>
-        <div style={gameListStyle}> Games List
-        </div>
-        <List />
-        <Footer />
-        </>
+            <>
+                <NavigationBar />
+                <br />
+                <div style={gameListStyle}>
+                    <strong>Games List</strong>
+                </div>
+                <p style={{ color: 'blue', marginLeft:"50px"}}>
+                    Click on any of the below games to start playing & learning!
+                </p>
+                <List />
+                <Footer />
+            </>
 
     );
 }

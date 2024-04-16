@@ -1,6 +1,7 @@
 
 import NavigationBar from '../navigationBar/navigationBar';
 import Footer from '../component/footer.js'
+import bubbles from '../img/bubbles.png'
 import React, { useState, useEffect } from 'react';
 
 function Home() {
@@ -54,8 +55,11 @@ function Home() {
         <div>  
             <CookieWarning/>
             <NavigationBar/>
+
             <p style={paragraphStyle}>
-                <strong>SpecSquad</strong> is a special online learning platform made just for kids with ASD or who exhibit symptoms of Autism Spectrum Disorder who are looking for fun ways to learn online. We know that sometimes it's hard to find things that work well for you. That's why we created <strong>SpecSquad</strong>!
+                <strong>Welcome to SpecSquad!</strong> 
+                <br></br>     <br></br>
+                SpecSquad is a special online learning platform made just for kids with ASD or who exhibit symptoms of Autism Spectrum Disorder who are looking for fun ways to learn online. We know that sometimes it's hard to find things that work well for you. That's why we created <strong>SpecSquad</strong>!
             </p>
 
             <p style={paragraphStyle}>
@@ -73,6 +77,7 @@ function Home() {
             <p style={paragraphStyle}>
                 Come join the fun at <strong>SpecSquad</strong> and let's learn together!
             </p>
+            <img src={bubbles} style={{margin: 'auto', display: 'block', padding: '10px'}} />
             <Footer />
         </div>
 
