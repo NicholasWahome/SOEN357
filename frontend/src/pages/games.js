@@ -1,6 +1,8 @@
 import List from '../component/list'
-import NavigationBar from '../navigationBar/navigationBar';
+import NavigationBar from '../navigationBar/navigationBar.js';
 import Footer from '../component/footer.js'
+
+
 
 function Games() {
     const gameListStyle = {
@@ -11,7 +13,8 @@ function Games() {
         <>
         <NavigationBar />
         <br></br>
-        <div style={gameListStyle}> Games List</div>
+        <div style={gameListStyle}> Games List
+        </div>
         <List />
         <Footer />
         </>

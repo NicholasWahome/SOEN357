@@ -1,6 +1,7 @@
 import React from "react";
-
-const GameListBlock = ({ imageUrl, caption }) => {
+import MathGame from '../pages/mathgame'
+import { Link } from 'react-router-dom';
+const GameListBlock = ({ imageUrl, caption,pageLink}) => {
   const blockStyle = {
     width: "400px",
     height: "400px",
@@ -25,7 +26,9 @@ const GameListBlock = ({ imageUrl, caption }) => {
 
   return (
     <div style={blockStyle}>
-      <img src={imageUrl} alt="Game" style={imageStyle} />
+      <Link to={pageLink}>
+      <img src={imageUrl} alt="Game" style={imageStyle}/>
+      </Link> 
       <div style={captionStyle}>
         <p>{caption}</p>
       </div>
