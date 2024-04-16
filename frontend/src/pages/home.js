@@ -1,6 +1,7 @@
 
 import NavigationBar from '../navigationBar/navigationBar';
 import Footer from '../component/footer.js'
+import React, { useState, useEffect } from 'react';
 
 function Home() {
     const paragraphStyle = {
@@ -9,12 +10,52 @@ function Home() {
         padding: "20px",
 
     }
+    const CookieWarning = () => {
+        const [accepted, setAccepted] = useState(false);
+    
+        useEffect(() => {
+            const isAccepted = localStorage.getItem('cookieAccepted');
+            if (isAccepted) {
+                setAccepted(true);
+            }
+        }, []);
+    
+        const acceptCookies = () => {
+            localStorage.setItem('cookieAccepted', true);
+            setAccepted(true);
+        };
+    
+        if (!accepted) {
+            return (
+                <div style={{ textAlign: 'center' }}>
+                <p>This website uses cookies to ensure you get the best experience on our website. By continuing to use this site, you agree to the use of cookies.</p>
+                <button onClick={acceptCookies} style={{ 
+                    backgroundColor: '#4CAF50', /* Green */
+                    border: 'none',
+                    color: 'white',
+                    padding: '15px 32px',
+                    textAlign: 'center',
+                    textDecoration: 'none',
+                    display: 'inline-block',
+                    fontSize: '16px',
+                    margin: '0 auto',
+                    cursor: 'pointer',
+                    borderRadius: '8px',
+                }}>Accept</button>
+            </div>
+            );
+        }
+    
+        return null;
+    };
 
     return (
+    
         <div>  
+            <CookieWarning/>
             <NavigationBar/>
             <p style={paragraphStyle}>
-                <strong>SpecSquad</strong> is a special online place made just for kids who are looking for fun ways to learn online. We know that sometimes it's hard to find things that work well for you. That's why we created <strong>SpecSquad</strong>!
+                <strong>SpecSquad</strong> is a special online learning platform made just for kids with ASD or who exhibit symptoms of Autism Spectrum Disorder who are looking for fun ways to learn online. We know that sometimes it's hard to find things that work well for you. That's why we created <strong>SpecSquad</strong>!
             </p>
 
             <p style={paragraphStyle}>
@@ -32,7 +73,6 @@ function Home() {
             <p style={paragraphStyle}>
                 Come join the fun at <strong>SpecSquad</strong> and let's learn together!
             </p>
-
             <Footer />
         </div>
 
