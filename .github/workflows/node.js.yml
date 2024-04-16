@@ -29,5 +29,4 @@ jobs:
     - run: cd frontend
     - run: npm install
     - run: npm install react-router-dom
-    - run: npm install 
     - run: npm start
