@@ -51,31 +51,31 @@ const MathGame = () => {
   const gameBlockStyle = {
     margin: "0 auto",
     padding: "20px",
-    backgroundColor: "#F4F4F4", // Calming background color
+    backgroundColor: "#F4F4F4", 
     borderRadius: "10px",
-    boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)", // Soft shadow for contrast
+    boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)", 
   };
 
   const inputStyle = {
-    fontSize: "18px", // Increased font size
+    fontSize: "18px", 
     padding: "10px",
     borderRadius: "5px",
-    border: "1px solid #ccc", // Subtle border for input field
+    border: "1px solid #ccc", 
   };
 
   const buttonStyle = {
-    fontSize: "20px", // Increased font size
+    fontSize: "20px", 
     padding: "10px 20px",
     borderRadius: "5px",
-    backgroundColor: "#007BFF", // Distinguished button color
-    color: "#fff", // White text for contrast
+    backgroundColor: "#007BFF", 
+    color: "#fff", 
     border: "none",
     cursor: "pointer",
     marginTop: "10px",
   };
 
   const messageStyle = {
-    fontSize: "18px", // Increased font size
+    fontSize: "18px", 
     marginTop: "10px",
   };
 
@@ -83,8 +83,10 @@ const MathGame = () => {
     <div>
       <NavigationBar />
       <div style={gameBlockStyle}>
+
         <h1>Math Game</h1>
         <p>Score: {score}</p>
+        <p>Enter the number that you think equals to the equation and then press submit to check your answer!</p>
         <form onSubmit={handleSubmit}>
           <p>
             {num1} + {num2} ={" "}
@@ -93,6 +95,7 @@ const MathGame = () => {
               value={userAnswer}
               onChange={handleChange}
               style={inputStyle}
+              placeholder="Type the number here"
               required
             />
           </p>

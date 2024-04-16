@@ -14,8 +14,7 @@ const GameListBlock = ({ imageUrl, caption,pageLink}) => {
 
   const imageStyle = {
     width: "100%",
-    height: "calc(100% - 20px)", // Adjusted height to accommodate the caption
-    objectFit: "cover",
+    height: "calc(100% - 20px)", 
   };
 
   const captionStyle = {
