@@ -80,6 +80,10 @@ const WordLearn = () => {
             <h1>Words Aloud</h1>
             <div>
             <div>
+    <span style={{ color: 'purple' }}>Type</span> the '<span style={{ color: 'blue' }}>Speak Word</span>' button to hear the name of the fruit, then <span style={{ color: 'orange' }}>type</span> it out in the input field and press '<span style={{ color: 'green' }}>check</span>'
+</div>
+
+            <div>
                 <p>Score: {score}</p>
             </div>
                 {words.map((item, index) => (
@@ -100,7 +104,6 @@ const WordLearn = () => {
                         </button>
                         {successWords[item.word] && <p>Success!</p>}
                         <br></br>
-                        <audio src={item.audio} controls style={{ marginLeft: '10px' }} />
                     </div>
                 ))}
                 <br></br>
