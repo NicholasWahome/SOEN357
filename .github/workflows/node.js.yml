@@ -1,0 +1,21 @@
+name: Node.js CI
+
+# This workflows simulates an environment to test the entire application using unit testing, integration testing and system testing.
+on: [push]
+
+jobs:
+  publish:
+    name: Publish the release version
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout the repository and the branch
+        uses: actions/checkout@v2
+        
+      # Install frontend dependencies and start server
+      - name: Start frontend server
+        working-directory: ./frontend
+        run: |
+          npm install
+          npm install react-router-dom
+          npm start &
