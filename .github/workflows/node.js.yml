@@ -3,30 +3,21 @@
 
 name: Node.js CI
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
+# This workflows simulates an environment to test the entire application using unit testing, integration testing and system testing.
+on: [push]
 jobs:
-  build:
-
+  publish:
+    name: Publish the release version
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [14.x, 16.x, 18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
+    
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: cd frontend
-    - run: npm install
-    - run: npm install react-router-dom
-    - run: npm start
+      - name: Checkout the repository and the branch
+        uses: actions/checkout@v2
+  # Install frontend entrance dependencies and start server
+      - name: Start frontend server
+        working-directory: ./frontend
+      - run: |
+             cd frontend
+             npm install
+             npm install react-router-dom
+             npm start
