@@ -1,10 +1,8 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
-
 name: Node.js CI
 
 # This workflows simulates an environment to test the entire application using unit testing, integration testing and system testing.
 on: [push]
+
 jobs:
   publish:
     name: Publish the release version
@@ -13,11 +11,11 @@ jobs:
     steps:
       - name: Checkout the repository and the branch
         uses: actions/checkout@v2
-  # Install frontend entrance dependencies and start server
+        
+      # Install frontend dependencies and start server
       - name: Start frontend server
         working-directory: ./frontend
-      - run: |
-             cd frontend
-             npm install
-             npm install react-router-dom
-             npm start
+        run: |
+          npm install
+          npm install react-router-dom
+          npm start
