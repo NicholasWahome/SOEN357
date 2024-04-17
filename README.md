@@ -8,3 +8,6 @@ Application for children with learning disabilities
 - Run `npm install`
 - After installation, run command `npm start`
 - Website opens up in Chrome
+
+Home Screen Overlook
+<img src='/frontend/src/img/homescreen.png'>
