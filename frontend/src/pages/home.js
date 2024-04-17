@@ -92,7 +92,7 @@ function Home() {
                 </li>
             </ul>
             </div>
-            <img src={bubbles} style={{margin: 'auto', display: 'block', padding: '10px'}} />
+            <img src={bubbles} style={{margin: 'auto', display: 'block', padding: '10px', backgroundSize: 'cover'}} />
             <Footer />
         </div>
 

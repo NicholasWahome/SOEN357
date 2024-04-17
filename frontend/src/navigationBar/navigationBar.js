@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from '../img/logo.png'
+import "../styles/navbar.css"
 
 
 const NavigationBar = () => {
   const navBarStyle = {
-    backgroundColor: "#333",
+    backgroundColor: "#9de0ad",
     color: "#fff",
     padding: "10px",
   };
@@ -26,13 +27,20 @@ const NavigationBar = () => {
   }
 
   const linkStyle = {
-    color: "#fff",
+    color: "#594f4f",
     textDecoration: "none",
-    display: "inline-block"
+    display: "inline-block",
+  };
+
+  const navm = {
+    width: "120px",
+    position: "relative",
+    left: "900px"
   };
 
   return (
     <div style={navBarStyle}>
+      <div style={navm}>
        <img src={logo} style ={logoStyle} />
       <ul style={navListStyle}>
         <li style={navItemStyle}>
@@ -42,6 +50,7 @@ const NavigationBar = () => {
           <Link to="/games" style={linkStyle}>Games</Link>
         </li>
       </ul>
+      </div>
     </div>
   );
 };
